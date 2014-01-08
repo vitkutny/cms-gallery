@@ -1,7 +1,7 @@
 parameters:
     modules:
         gallery:
-            directory: %modules.directory%/vitkutny/cms-gallery/src
+            directory: %modules.directory%/cms-gallery/src/CMS/Gallery
     locale:
         - %modules.gallery.directory%/locale
 services:

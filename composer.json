@@ -1,6 +1,6 @@
 {
     "name": "vitkutny/cms-gallery",
     "autoload": {
-        "psr-0": {"CMS\\Gallery": "src/"}
+        "psr-0": {"CMS\\Gallery": ""}
     }
 }

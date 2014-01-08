@@ -1,0 +1,19 @@
+parameters:
+    modules:
+        gallery:
+            directory: %modules.directory%/Gallery
+    locale:
+        - %modules.gallery.directory%/locale
+services:
+    - CMS\Gallery\Model\Repository
+    - CMS\Gallery\Model\Facade
+
+    - CMS\Gallery\Photo\Model\Repository
+    - CMS\Gallery\Photo\Model\Facade
+
+    - CMS\Gallery\Video\Model\Repository
+    - CMS\Gallery\Video\Model\Facade
+
+    - CMS\Gallery\Control
+    - CMS\Gallery\Photo\Control
+    - CMS\Gallery\Video\Control

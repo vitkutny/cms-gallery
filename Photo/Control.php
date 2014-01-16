@@ -1,10 +1,10 @@
 <?php
 
-namespace CMS\Gallery\Photo;
+namespace WebEdit\Gallery\Photo;
 
-use CMS;
+use WebEdit;
 
-final class Control extends CMS\Control {
+final class Control extends WebEdit\Control {
 
     public function render($photo) {
         $template = $this->template;

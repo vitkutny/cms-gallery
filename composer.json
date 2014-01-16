@@ -1,6 +1,6 @@
 {
-    "name": "vitkutny/cms-gallery",
+    "name": "webedit/gallery",
     "autoload": {
-        "psr-4": {"CMS\\Gallery\\": ""}
+        "psr-4": {"WebEdit\\Gallery\\": ""}
     }
 }

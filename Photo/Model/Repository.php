@@ -1,8 +1,8 @@
 <?php
 
-namespace CMS\Gallery\Photo\Model;
+namespace WebEdit\Gallery\Photo\Model;
 
-use CMS\Database;
+use WebEdit\Database;
 
 final class Repository extends Database\Repository {
 

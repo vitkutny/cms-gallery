@@ -1,12 +1,12 @@
 <?php
 
-namespace CMS\Gallery;
+namespace WebEdit\Gallery;
 
-use CMS;
-use CMS\Gallery\Photo;
-use CMS\Gallery\Video;
+use WebEdit;
+use WebEdit\Gallery\Photo;
+use WebEdit\Gallery\Video;
 
-final class Control extends CMS\Control {
+final class Control extends WebEdit\Control {
 
     private $photoFacade;
     private $videoFacade;

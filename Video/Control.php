@@ -1,10 +1,10 @@
 <?php
 
-namespace CMS\Gallery\Video;
+namespace WebEdit\Gallery\Video;
 
-use CMS;
+use WebEdit;
 
-final class Control extends CMS\Control {
+final class Control extends WebEdit\Control {
 
     public function render($video) {
         $template = $this->template;

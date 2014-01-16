@@ -1,9 +1,9 @@
 <?php
 
-namespace CMS\Gallery\Photo\Model;
+namespace WebEdit\Gallery\Photo\Model;
 
-use CMS\Model;
-use CMS\Gallery\Photo;
+use WebEdit\Model;
+use WebEdit\Gallery\Photo;
 
 class Facade extends Model\Facade {
 

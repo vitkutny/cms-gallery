@@ -1,8 +1,8 @@
 <?php
 
-namespace CMS\Gallery\Video\Model;
+namespace WebEdit\Gallery\Video\Model;
 
-use CMS\Database;
+use WebEdit\Database;
 
 final class Repository extends Database\Repository {
 

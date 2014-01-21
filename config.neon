@@ -1,9 +1,9 @@
 parameters:
-    modules:
+    webedit:
         gallery:
-            directory: %modules.directory%/gallery
+            directory: %webedit.directory%/gallery
     locale:
-        - %modules.gallery.directory%/locale
+        - %webedit.gallery.directory%/locale
 services:
     - WebEdit\Gallery\Model\Repository
     - WebEdit\Gallery\Model\Facade

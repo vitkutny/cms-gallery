@@ -13,7 +13,3 @@ services:
 
     - WebEdit\Gallery\Video\Model\Repository
     - WebEdit\Gallery\Video\Model\Facade
-
-    - WebEdit\Gallery\Control
-    - WebEdit\Gallery\Photo\Control
-    - WebEdit\Gallery\Video\Control

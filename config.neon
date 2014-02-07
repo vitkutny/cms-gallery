@@ -1,7 +1,7 @@
 parameters:
     webedit:
         gallery:
-            directory: %webedit.directory%/gallery
+            directory: %vendor.webedit.directory%/gallery
     locale:
         - %webedit.gallery.directory%/locale
 services:

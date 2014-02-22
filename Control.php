@@ -11,7 +11,7 @@ final class Control extends WebEdit\Control {
     private $photoFacade;
     private $videoFacade;
 
-    public function __construct(Photo\Model\Facade $photoFacade, Video\Model\Facade $videoFacade) {
+    public function __construct(Photo\Facade $photoFacade, Video\Facade $videoFacade) {
         $this->photoFacade = $photoFacade;
         $this->videoFacade = $videoFacade;
     }

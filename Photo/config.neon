@@ -1,0 +1,3 @@
+services:
+    - WebEdit\Gallery\Photo\Repository
+    - WebEdit\Gallery\Photo\Facade

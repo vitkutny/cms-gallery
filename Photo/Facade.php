@@ -1,15 +1,15 @@
 <?php
 
-namespace WebEdit\Gallery\Photo\Model;
+namespace WebEdit\Gallery\Photo;
 
-use WebEdit\Model;
+use WebEdit;
 use WebEdit\Gallery\Photo;
 
-class Facade extends Model\Facade {
+class Facade extends WebEdit\Facade {
 
     public $repository;
 
-    public function __construct(Photo\Model\Repository $repository) {
+    public function __construct(Photo\Repository $repository) {
         $this->repository = $repository;
     }
 

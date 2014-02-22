@@ -1,12 +1,10 @@
 <?php
 
-namespace WebEdit\Gallery\Photo\Model;
+namespace WebEdit\Gallery\Photo;
 
 use WebEdit\Database;
 
 final class Repository extends Database\Repository {
-
-    protected $table = "photo";
 
     public function getPhoto($id) {
         return $this->getOne($id);

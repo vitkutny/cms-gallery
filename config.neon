@@ -5,11 +5,5 @@ parameters:
     locale:
         - %webedit.gallery.directory%/locale
 services:
-    - WebEdit\Gallery\Model\Repository
-    - WebEdit\Gallery\Model\Facade
-
-    - WebEdit\Gallery\Photo\Model\Repository
-    - WebEdit\Gallery\Photo\Model\Facade
-
-    - WebEdit\Gallery\Video\Model\Repository
-    - WebEdit\Gallery\Video\Model\Facade
+    - WebEdit\Gallery\Repository
+    - WebEdit\Gallery\Facade

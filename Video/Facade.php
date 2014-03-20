@@ -2,10 +2,9 @@
 
 namespace WebEdit\Gallery\Video;
 
-use WebEdit;
 use WebEdit\Gallery\Video;
 
-class Facade extends WebEdit\Facade {
+class Facade {
 
     public $repository;
 

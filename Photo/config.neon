@@ -1,3 +1,4 @@
 services:
     - WebEdit\Gallery\Photo\Repository
     - WebEdit\Gallery\Photo\Facade
+    - WebEdit\Gallery\Photo\Control\Factory

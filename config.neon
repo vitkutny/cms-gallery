@@ -1,9 +1,9 @@
 parameters:
-    webedit:
-        gallery:
-            directory: %vendor.webedit.directory%/gallery
+    gallery:
+        directory: %vendor.webedit.directory%/gallery
     locale:
-        - %webedit.gallery.directory%/locale
+        - %gallery.directory%/locale
 services:
     - WebEdit\Gallery\Repository
     - WebEdit\Gallery\Facade
+    - WebEdit\Gallery\Control\Factory

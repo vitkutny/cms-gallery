@@ -1,6 +1,8 @@
 {
     "name": "webedit/gallery",
     "autoload": {
-        "psr-4": {"WebEdit\\Gallery\\": ""}
+        "psr-4": {
+            "WebEdit\\Gallery\\": ""
+        }
     }
 }

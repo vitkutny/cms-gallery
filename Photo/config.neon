@@ -1,4 +1,19 @@
+parameters:
+    gallery:
+        photo:
+            cache:
+                directory: %public.cache.directory%/gallery/photo
+            upload:
+                directory: %public.upload.directory%/gallery/photo
 services:
     - WebEdit\Gallery\Photo\Repository
-    - WebEdit\Gallery\Photo\Facade
+    - WebEdit\Gallery\Photo\Facade(%gallery.photo%)
+    - WebEdit\Gallery\Photo\Presenter(%gallery.photo%)
     - WebEdit\Gallery\Photo\Control\Factory
+nette:
+    routing:
+        routes:
+            'cache/gallery/photo/<id>[/action]':
+                module: Gallery:Photo
+                presenter: Presenter
+                action: view

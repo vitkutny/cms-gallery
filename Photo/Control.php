@@ -6,27 +6,16 @@ use WebEdit;
 
 final class Control extends WebEdit\Control {
 
-    public function render($photo) {
-        $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/photo.latte');
-        $template->render();
+    private $photo;
+
+    public function __construct($photo) {
+        $this->photo = $photo;
     }
 
-    public function renderSmall($photo) { //cart
+    public function render() {
         $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/photo.latte');
-        $template->render();
-    }
-
-    public function renderMedium($photo) { //product list
-        $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/photo.latte');
-        $template->render();
-    }
-
-    public function renderBig($photo) { //product main photo
-        $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/photo.latte');
+        $template->photo = $this->photo;
+        $template->setFile($this->getTemplateFiles('view'));
         $template->render();
     }
 

@@ -8,30 +8,20 @@ use WebEdit\Gallery\Video;
 
 final class Control extends WebEdit\Control {
 
-    private $photoFacade;
-    private $videoFacade;
+    private $gallery;
+    private $photoRepository;
+    private $photoControlFactory;
+    private $videoControlFactory;
 
-    public function __construct(Photo\Facade $photoFacade, Video\Facade $videoFacade) {
-        $this->photoFacade = $photoFacade;
-        $this->videoFacade = $videoFacade;
+    public function __construct($gallery, Photo\Repository $photoRepository, Photo\Control\Factory $photoControlFactory, Video\Control\Factory $videoFacade) {
+        $this->gallery = $gallery;
+        $this->photoRepository = $photoRepository;
+        $this->photoControlFactory = $photoControlFactory;
+        $this->videoControlFactory = $videoFacade;
     }
 
-    public function render($gallery) {
-        $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/gallery.latte');
-        $template->render();
-    }
-
-    public function renderPhoto($gallery) {
-        $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/photo.latte');
-        $template->render();
-    }
-
-    public function renderVideo($gallery) {
-        $template = $this->template;
-        $template->setFile(__DIR__ . '/templates/video.latte');
-        $template->render();
+    protected function createComponentPhoto() {
+        return $this->photoControlFactory->create($this->gallery->gallery_photo);
     }
 
 }

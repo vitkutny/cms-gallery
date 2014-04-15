@@ -6,4 +6,7 @@ parameters:
 services:
     - WebEdit\Gallery\Repository
     - WebEdit\Gallery\Facade
-    - WebEdit\Gallery\Control\Factory
+    -
+        implement: WebEdit\Gallery\Control\Factory
+        parameters: [gallery]
+        arguments: [%gallery%]

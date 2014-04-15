@@ -9,7 +9,10 @@ services:
     - WebEdit\Gallery\Photo\Repository
     - WebEdit\Gallery\Photo\Facade(%gallery.photo%)
     - WebEdit\Gallery\Photo\Presenter(%gallery.photo%)
-    - WebEdit\Gallery\Photo\Control\Factory
+    -
+        implement: WebEdit\Gallery\Photo\Control\Factory
+        parameters: [photo]
+        arguments: [%photo%]
 nette:
     routing:
         routes:

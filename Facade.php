@@ -21,17 +21,19 @@ final class Facade {
         $default = $data['gallery']['photo']['default'];
         unset($data['gallery']['photo']['default']);
         $photo = $this->photoFacade->add($data);
-        if ($default) {
-            $this->repository->update($gallery, ['photo_id' => $photo->id]);
+        if ($photo && $default) {
+            $this->repository->update($gallery, ['gallery_photo_id' => $photo->id]);
         }
         return $gallery;
     }
 
     public function edit($gallery, array $data) {
+        exit; //TODO
         return $this->repository->update($gallery, $data);
     }
 
     public function delete($gallery) {
+        exit; //TODO
         return $this->repository->remove($gallery);
     }
 

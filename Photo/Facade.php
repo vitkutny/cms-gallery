@@ -16,6 +16,9 @@ final class Facade {
     }
 
     public function add(array $data) {
+        if (!$data['gallery']['photo']['file']->isOk()) {
+            return NULL;
+        }
         $image = Image::fromFile($data['gallery']['photo']['file']);
         unset($data['gallery']['photo']['file']);
         $photo = $this->repository->insert($data['gallery']['photo']);

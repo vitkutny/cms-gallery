@@ -5,7 +5,7 @@ parameters:
             cache:
                 directory: %public.cache.directory%/gallery/photo
             upload:
-                directory: %public.upload.directory%/gallery/photo
+                directory: %private.upload.directory%/gallery/photo
             empty:
                 image: %gallery.photo.directory%/Presenter/photo.jpg
 services:

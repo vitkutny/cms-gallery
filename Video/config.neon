@@ -1,4 +1,0 @@
-services:
-    - WebEdit\Gallery\Video\Repository
-    - WebEdit\Gallery\Video\Facade
-    - WebEdit\Gallery\Video\Control\Factory

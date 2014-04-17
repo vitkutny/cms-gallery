@@ -12,9 +12,9 @@ final class Presenter extends WebEdit\Presenter {
     private $empty;
 
     public function __construct(array $settings) {
-        $this->upload = $settings['upload']['directory'];
-        $this->cache = $settings['cache']['directory'];
-        $this->empty = $settings['empty']['image'];
+        $this->upload = $settings['upload'];
+        $this->cache = $settings['cache'];
+        $this->empty = $settings['default'];
     }
 
     public function actionView($id = NULL) {

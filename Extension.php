@@ -19,7 +19,7 @@ final class Extension extends WebEdit\Extension {
         $config = $this->getConfig($this->defaults);
         $builder = $this->getContainerBuilder();
         $builder->getDefinition($this->prefix('photo.facade'))
-                ->setArguments([$config['photo']]);
+                ->setArguments([$config['photo']['upload']]);
         $builder->getDefinition($this->prefix('photo.presenter'))
                 ->setArguments([$config['photo']]);
     }

@@ -7,11 +7,11 @@ use WebEdit\Image;
 
 final class Facade {
 
-    private $directory;
+    private $upload;
     private $repository;
 
-    public function __construct(array $settings, Photo\Repository $repository) {
-        $this->directory = $settings['upload']['directory'];
+    public function __construct($upload, Photo\Repository $repository) {
+        $this->upload = $upload;
         $this->repository = $repository;
     }
 
@@ -22,10 +22,10 @@ final class Facade {
         $image = Image::fromFile($data['gallery']['photo']['file']);
         unset($data['gallery']['photo']['file']);
         $photo = $this->repository->insert($data['gallery']['photo']);
-        if (!file_exists($this->directory)) {
-            mkdir($this->directory, NULL, TRUE);
+        if (!file_exists($this->upload)) {
+            mkdir($this->upload, NULL, TRUE);
         }
-        $image->save($this->directory . '/' . $photo->id . '.jpg', 100, Image::JPEG);
+        $image->save($this->upload . '/' . $photo->id . '.jpg', 100, Image::JPEG);
         return $photo;
     }
 

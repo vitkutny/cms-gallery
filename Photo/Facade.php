@@ -30,10 +30,11 @@ final class Facade {
     }
 
     public function edit($photo, array $data) {
-        return $this->repository->update($photo, $data);
+        return $this->repository->update($photo, $data['gallery']['photo']);
     }
 
     public function delete($photo) {
+        unlink($this->upload . '/' . $photo->id . '.jpg');
         return $this->repository->remove($photo);
     }
 

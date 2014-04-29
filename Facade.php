@@ -33,7 +33,9 @@ final class Facade {
     }
 
     public function delete($gallery) {
-        exit; //TODO
+        foreach ($gallery->related('gallery_photo') as $photo) {
+            $this->photoFacade->delete($photo);
+        }
         return $this->repository->remove($gallery);
     }
 

@@ -17,6 +17,10 @@ final class Facade {
 
     public function add(array $data) {
         $gallery = $this->repository->insert();
+        return $this->edit($gallery, $data);
+    }
+
+    public function edit($gallery, array $data) {
         $data['gallery']['photo']['gallery_id'] = $gallery->id;
         $default = $data['gallery']['photo']['default'];
         unset($data['gallery']['photo']['default']);
@@ -25,11 +29,6 @@ final class Facade {
             $this->repository->update($gallery, ['gallery_photo_id' => $photo->id]);
         }
         return $gallery;
-    }
-
-    public function edit($gallery, array $data) {
-        exit; //TODO
-        return $this->repository->update($gallery, $data);
     }
 
     public function delete($gallery) {

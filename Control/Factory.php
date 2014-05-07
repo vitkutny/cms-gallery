@@ -2,12 +2,12 @@
 
 namespace WebEdit\Gallery\Control;
 
-use WebEdit\Gallery\Control;
+use WebEdit\Gallery;
 
 interface Factory {
 
     /**
-     * @return Control
+     * @return Gallery\Control
      */
     public function create($gallery);
 }

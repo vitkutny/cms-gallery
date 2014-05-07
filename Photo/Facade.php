@@ -3,7 +3,7 @@
 namespace WebEdit\Gallery\Photo;
 
 use WebEdit\Gallery\Photo;
-use WebEdit\Image;
+use WebEdit;
 
 final class Facade {
 
@@ -19,7 +19,7 @@ final class Facade {
         if (!$data['gallery']['photo']['file']->isOk()) {
             return NULL;
         }
-        $image = Image::fromFile($data['gallery']['photo']['file']);
+        $image = WebEdit\Image::fromFile($data['gallery']['photo']['file']);
         unset($data['gallery']['photo']['file']);
         $photo = $this->repository->insert($data['gallery']['photo']);
         if (!file_exists($this->upload)) {

@@ -2,12 +2,12 @@
 
 namespace WebEdit\Gallery\Photo\Control;
 
-use WebEdit\Gallery\Photo\Control;
+use WebEdit\Gallery\Photo;
 
 interface Factory {
 
     /**
-     * @return Control
+     * @return Photo\Control
      */
     public function create($photo);
 }

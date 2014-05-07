@@ -3,7 +3,6 @@
 namespace WebEdit\Gallery\Photo;
 
 use WebEdit;
-use WebEdit\Image;
 
 final class Presenter extends WebEdit\Presenter {
 
@@ -22,12 +21,12 @@ final class Presenter extends WebEdit\Presenter {
         if (!file_exists($file)) {
             $this->error();
         }
-        $image = Image::fromFile($file);
+        $image = WebEdit\Image::fromFile($file);
         //TODO: watermark and default size
         if (!file_exists($this->cache)) {
             mkdir($this->cache, NULL, TRUE);
         }
-        $image->save($this->cache . ($id ? '/' . $id : NULL) . '.jpg');
+        $image->save($this->cache . '/' . ($id ? : 0) . '.jpg');
         $image->send();
     }
 

@@ -4,7 +4,7 @@ namespace WebEdit\Gallery\Photo;
 
 use WebEdit;
 
-final class Control extends WebEdit\Control {
+final class Control extends WebEdit\Control { //TODO entity control
 
     private $photo;
 
@@ -12,11 +12,9 @@ final class Control extends WebEdit\Control {
         $this->photo = $photo;
     }
 
-    public function render() {
-        $template = $this->template;
-        $template->photo = $this->photo;
-        $template->setFile($this->getTemplateFiles('view'));
-        $template->render();
+    public function render($type = 'view') {
+        $this->template->photo = $this->photo;
+        parent::render($type);
     }
 
 }

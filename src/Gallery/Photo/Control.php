@@ -12,9 +12,9 @@ final class Control extends WebEdit\Control { //TODO entity control
         $this->photo = $photo;
     }
 
-    public function render($type = 'view') {
+    public function render() {
         $this->template->photo = $this->photo;
-        parent::render($type);
+        parent::render();
     }
 
 }

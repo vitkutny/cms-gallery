@@ -22,9 +22,7 @@ final class Extension extends WebEdit\Extension {
         $builder->addDefinition($this->prefix('facade'))
                 ->setClass('WebEdit\Gallery\Facade');
         $builder->addDefinition($this->prefix('control'))
-                ->setImplement('WebEdit\Gallery\Control\Factory')
-                ->setParameters(['gallery'])
-                ->setArguments([new \Nette\PhpGenerator\PhpLiteral('$gallery')]); //TODO
+                ->setImplement('WebEdit\Gallery\Control\Factory');
         $builder->addDefinition($this->prefix('photo.repository'))
                 ->setClass('WebEdit\Gallery\Photo\Repository');
         $builder->addDefinition($this->prefix('photo.facade'))
@@ -34,9 +32,7 @@ final class Extension extends WebEdit\Extension {
                 ->setClass('WebEdit\Gallery\Photo\Presenter')
                 ->setArguments([$config['photo']]);
         $builder->addDefinition($this->prefix('photo.control'))
-                ->setImplement('WebEdit\Gallery\Photo\Control\Factory')
-                ->setParameters(['photo'])
-                ->setArguments([new \Nette\PhpGenerator\PhpLiteral('$photo')]); //TODO
+                ->setImplement('WebEdit\Gallery\Photo\Control\Factory');
     }
 
 }

@@ -9,5 +9,5 @@ interface Factory {
     /**
      * @return Gallery\Control
      */
-    public function create($gallery);
+    public function create();
 }

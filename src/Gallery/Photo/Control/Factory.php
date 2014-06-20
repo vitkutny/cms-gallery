@@ -9,5 +9,5 @@ interface Factory {
     /**
      * @return Photo\Control
      */
-    public function create($photo);
+    public function create();
 }

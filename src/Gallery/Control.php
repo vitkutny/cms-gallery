@@ -2,21 +2,21 @@
 
 namespace WebEdit\Gallery;
 
-use WebEdit;
+use WebEdit\Entity;
 use WebEdit\Gallery\Photo;
 
-final class Control extends WebEdit\Control {
+final class Control extends Entity\Control {
 
-    private $gallery;
-    private $photoControlFactory;
+    private $photoControl;
 
-    public function __construct($gallery, Photo\Control\Factory $photoControlFactory) {
-        $this->gallery = $gallery;
-        $this->photoControlFactory = $photoControlFactory;
+    public function __construct(Photo\Control\Factory $photoControl) {
+        $this->photoControl = $photoControl;
     }
 
     protected function createComponentPhoto() {
-        return $this->photoControlFactory->create($this->gallery->gallery_photo);
+        $photoControl = $this->photoControl->create();
+        $photoControl->setEntity($this->entity->gallery_photo);
+        return $photoControl;
     }
 
 }

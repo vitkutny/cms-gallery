@@ -2,9 +2,9 @@
 
 namespace WebEdit\Gallery;
 
-use WebEdit;
+use WebEdit\Application;
 
-final class Extension extends WebEdit\Extension {
+final class Extension extends Application\Extension {
 
     private $defaults = [
         'photo' => [

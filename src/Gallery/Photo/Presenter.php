@@ -2,9 +2,9 @@
 
 namespace WebEdit\Gallery\Photo;
 
-use WebEdit;
+use WebEdit\Application;
 
-final class Presenter extends WebEdit\Presenter {
+final class Presenter extends Application\Presenter {
 
     private $upload;
     private $cache;

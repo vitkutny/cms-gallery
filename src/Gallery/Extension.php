@@ -8,9 +8,9 @@ final class Extension extends Application\Extension {
 
     private $defaults = [
         'photo' => [
-            'upload' => '%private.upload.directory%/gallery/photo',
-            'cache' => '%public.cache.directory%/gallery/photo',
-            'default' => '%public.directory%/images/gallery/photo.jpg'
+            'upload' => '%application.private.upload.directory%/gallery/photo',
+            'cache' => '%application.public.cache.directory%/gallery/photo',
+            'default' => '%application.public.directory%/images/gallery/photo.jpg'
         ]
     ];
 
